@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang = "pl"></html>
+    <title>Lab 2 - Formularz</title>
+</head>
+<body>
+    <div>
+        <form>
+            <label>Imię:</label><br>
+            <input type="text" id = "name"><br>
+
+            <label>Nazwisko:</label><br>
+            <input type="text" id = "surname"><br>
+
+            <label>Data urodzenia:</label><br>
+            <input type="date" id = "date_of_birth"><br>
+
+            <label>Płeć:</label><br>
+            <select id="gender">
+                <option value="man">Kobieta</option>
+                <option value="woman">Mężczyzna</option>
+                <option value="hidden">Nie chcę podawać</option>
+            </select><br>
+
+            <label>Hasło:</label><br>
+            <input type="password" id= "password"><br>
+
+            <label>Telefon:</label><br>
+            <input type="tel" id="phone"><br>
+
+            <label>Prawo jazdy:</label><br>
+            <input type="radio" id="have_license" name="license" value="yes">
+            <label for="have_license">Posiadam</label>
+            <input type="radio" id="no_license"  name = "license" value="no">
+            <label for="no_license">Nie posiadam</label><br>
+
+            <label>Miasto:</label><br>
+            <input type="text" id="city"><br>
+
+            <label>Ulica:</label><br>
+            <input type="text" id = "street"><br>
+
+            <label>Numer domu:</label><br>
+            <input type="text" id="home_num"><br>
+
+            <label>Numer mieszkania:</label><br>
+            <input type="number" id="flat_num"><br>
+
+            <label>Państwo:</label><br>
+            <input type="text" id="nation"><br>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
