@@ -21,7 +21,7 @@
             <select id="gender">
                 <option value="man">Kobieta</option>
                 <option value="woman">Mężczyzna</option>
-                <option value="hidden">Nie chcę podawać</option>
+                <option value="unknown">Nie chcę podawać</option>
             </select><br>
 
             <label>Hasło:</label><br>
@@ -31,10 +31,10 @@
             <input type="tel" id="phone"><br>
 
             <label>Prawo jazdy:</label><br>
-            <input type="radio" id="have_license" name="license" value="yes">
-            <label for="have_license">Posiadam</label>
-            <input type="radio" id="no_license"  name = "license" value="no">
-            <label for="no_license">Nie posiadam</label><br>
+            <select id="license">
+                <option value="has_license">Posiadam</option>
+                <option value="no_license">Nie posiadam</option>
+            </select><br>
 
             <label>Miasto:</label><br>
             <input type="text" id="city"><br>
