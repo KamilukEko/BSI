@@ -31,6 +31,6 @@ document.getElementById('evaluate-button').addEventListener('click', () => {
         output.textContent = eval(output.textContent);
     }
     catch (error) {
-        alert(error.textContent);
+        alert(error);
     }
 });
