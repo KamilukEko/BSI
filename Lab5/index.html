@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lab 5 - Formularz z CSS i walidatorem</title>
+</head>
+<body>
+    <div class="blur-container">
+        <form id="personal-data-form">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" validation-type="text" required>
+
+            <label for="surname">Nazwisko:</label>
+            <input type="text" id="surname" name="surname" validation-type="text" required>
+
+            <label for="date-of-birth">Data urodzenia:</label>
+            <input type="date" id="date-of-birth" name="date-of-birth" required>
+
+            <label for="gender">Płeć:</label>
+            <select id="gender" name="gender" required>
+                <option value="woman">Kobieta</option>
+                <option value="man">Mężczyzna</option>
+                <option value="hidden">Nie chcę podawać</option>
+            </select>
+
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" validation-type="phone-number" required>
+
+            <label>Prawo jazdy:</label>
+            <div class="license-options">
+                <label for="have-license">Posiadam</label>
+                <label for="no-license">Nie posiadam</label>
+            </div>
+            <div class="license-options">
+                <input type="radio" id="have-license" name="license" value="yes" required>
+                <input type="radio" id="no-license" name="license" value="no" required>
+            </div>
+
+            <label for="city">Miasto:</label>
+            <input type="text" id="city" name="city" validation-type="text" required>
+
+            <label for="street">Ulica:</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="home-num">Numer domu:</label>
+            <input type="text" id="home-num" name="home-num" validation-type="number" required>
+
+            <label for="flat-num">Numer mieszkania:</label>
+            <input type="number" id="flat-num" name="flat-num" validation-type="number">
+
+            <label for="nation">Państwo:</label>
+            <input type="text" id="nation" name="nation" validation-type="text" required>
+
+            <div>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <script src="formValidator.js"></script>
+</body>
+</html>
