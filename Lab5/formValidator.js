@@ -10,14 +10,14 @@ function updateInputError(input, containsErrors) {
         return;
     }
 
-    if (errors.includes(input.name)) {
-        input.previousElementSibling?.classList.remove("error-label");
-        input.classList.remove("error");
-        errors.splice(errors.indexOf(input.name), 1);
-    }
+    if (!errors.includes(input.name))
+        return; 
+
+    input.previousElementSibling?.classList.remove("error-label");     input.classList.remove("error");
+    errors.splice(errors.indexOf(input.name), 1);
 }
 
-const phoneNumberRegex = /^(\+\d{1,3}[-.\s]?)?(?\d{2,3}?[-.\s]?)?(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{3})$/;
+const phoneNumberRegex = const numbersRegex = /^[1-9][0-9]{8}$/;
 const textRegex = /^[A-Za-ząęłńóśźżĄĘŁŃÓŚŹŻ\s]{1,64}$/;
 const numbersRegex = /^[1-9][0-9]{0,3}$/;
 
