@@ -1,6 +1,7 @@
 const errors = [];
 
 function updateInputError(input, containsErrors) {
+
     if (containsErrors) {
         if (!errors.includes(input.name)) {
             input.previousElementSibling?.classList.add("error-label");
@@ -22,6 +23,7 @@ const textRegex = /^[A-Za-ząęłńóśźżĄĘŁŃÓŚŹŻ\s]{1,64}$/;
 const numbersRegex = /^[1-9][0-9]{0,3}$/;
 
 function validateInput(input) {
+
     let containsErrors = false;
 
     switch (input.getAttribute("validation-type")) {
@@ -45,6 +47,7 @@ const timeouts = {};
 
 const inputs = document.querySelectorAll("input");
 inputs.forEach((input) => {
+
     if (!input.name) return;
 
     input.addEventListener("input", () => {
