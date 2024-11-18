@@ -58,7 +58,7 @@ inputs.forEach((input) => {
 
 document.getElementById("personal-data-form").addEventListener("submit", (e) => {
     
-if (errors.length > 0) {
+    if (errors.length > 0) {
         e.preventDefault();
         alert("This form contains errors.");
     }
