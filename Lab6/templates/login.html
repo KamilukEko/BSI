@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Logowanie</title>
+</head>
+<body>
+    <div class="blur-container">
+        <form method="POST">
+            <h1>Logowanie</h1>
+
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div>
+                <input type="submit" value="Zaloguj">
+                <input type="reset" value="Wyczyść">
+            </div>
+
+             {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul>
+                        {% for category, message in messages %}
+                            <li style="color: {{ 'orange' if category == 'danger' else 'green' }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+</html>
