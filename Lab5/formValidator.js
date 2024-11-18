@@ -23,7 +23,7 @@ function updateInputError(input, containsErrors) {
 
 const phoneNumberRegex = /^(\+\d{1,3}[-.\s]?)?(\(?\d{2,3}\)?[-.\s]?)?(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{3})$/;
 const textRegex = /^[A-Za-ząęłńóśźżĄĘŁŃÓŚŹŻ\s]{1,64}$/;
-const numbersRegex = /^(?:[1-9][0-9]{0,3}|[1-9][0-9]{0,2}[0-9]|[1-9][0-9]{0,1}|[1-9])$/;
+const numbersRegex = /^[1-9][0-9]{0,3}]$/;
 
 function validateInput(input) {
 
