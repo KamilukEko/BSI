@@ -18,7 +18,7 @@ function updateInputError(input, containsErrors) {
     errors.splice(errors.indexOf(input.name), 1);
 }
 
-const phoneNumberRegex = const numbersRegex = /^[1-9][0-9]{8}$/;
+const phoneNumberRegex = /^[1-9][0-9]{8}$/;
 const textRegex = /^[A-Za-ząęłńóśźżĄĘŁŃÓŚŹŻ\s]{1,64}$/;
 const numbersRegex = /^[1-9][0-9]{0,3}$/;
 
