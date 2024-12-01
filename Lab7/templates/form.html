@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lab 2 - Formularz z CSS</title>
+</head>
+<body>
+    <div class="blur-container">
+        <form action="/form/display" method="POST">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="surname">Nazwisko:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="date_of_birth">Data urodzenia:</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
+
+            <label for="gender">Płeć:</label>
+            <select id="gender" name="gender" required>
+                <option value="woman">Kobieta</option>
+                <option value="man">Mężczyzna</option>
+                <option value="hidden">Nie chcę podawać</option>
+            </select>
+
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label>Prawo jazdy:</label>
+            <div class="license-options">
+                <label for="have_license">Posiadam</label>
+                <label for="no_license">Nie posiadam</label>
+            </div>
+            <div class="license-options">
+                <input type="radio" id="have_license" name="license" value="yes" required>
+                <input type="radio" id="no_license" name="license" value="no" required>
+            </div>
+
+            <label for="city">Miasto:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="street">Ulica:</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="home_num">Numer domu:</label>
+            <input type="text" id="home_num" name"home_num" required>
+
+            <label for="flat_num">Numer mieszkania:</label>
+            <input type="number" id="flat_num" name="flat_num">
+
+            <label for="nation">Państwo:</label>
+            <input type="text" id="nation" name="nation" required>
+
+            <div>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
