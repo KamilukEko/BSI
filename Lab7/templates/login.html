@@ -13,23 +13,19 @@
             <h1>Logowanie</h1>
 
             <label for="username">Nazwa użytkownika:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" value="admin" required>
 
             <label for="password">Hasło:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" value="admin" required>
 
             <div>
                 <input type="submit" value="Zaloguj">
                 <input type="reset" value="Wyczyść">
             </div>
 
-             {% with messages = get_flashed_messages(with_categories=true) %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
-                    <ul>
-                        {% for category, message in messages %}
-                            <li style="color: {{ 'orange' if category == 'danger' else 'green' }}">{{ message }}</li>
-                        {% endfor %}
-                    </ul>
+                    <h2>{{ messages[0][1] }}</h2>
                 {% endif %}
             {% endwith %}
         </form>
