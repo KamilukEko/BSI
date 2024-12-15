@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             } else {
                 const noResultRow = document.createElement('tr');
-
+                noResultRow.innerHTML = `<td colspan="3">Nie znaleziono takich studentów</td>`;
                 tableBody.appendChild(noResultRow);
             }
         } catch (error) {
